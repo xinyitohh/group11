@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
+        *{
+            font-family: "Poppins", sans-serif;
+        }
         .faq-popup {
             display: none;
             position: fixed;
@@ -87,6 +90,190 @@
 
         .faq-popup.close {
             animation: slideOutToCenter 0.5s forwards;
+        }
+        nav{
+            display:flex;
+            padding:2% 6%;
+            justify-content:space-between;
+            align-items:center;
+            background-color: #777;
+            background-color: rgb(16,20,44);
+            z-index:9999 !important;
+        }
+
+        nav img{
+            width:250px;
+        }
+        .nav-links{
+            flex:1;
+            text-align:right;
+
+        }
+
+        .nav-links ul li{
+            list-style:none;
+            display:inline-block;
+            padding: 8px 12px;
+            position:relative;
+
+        }
+        .nav-links ul li a{
+            color:#fff;
+            text-decoration:none;
+            font-size:13px;
+            right: -200px;
+        }
+
+        .nav-links ul li::after{
+            content:'';
+            width:0%;
+            height:2px;
+            background:#f44336;
+            display:block;
+            margin:auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width:100%;
+        }
+        nav .fa{
+            display:none;
+        }
+        .dropdown-content a{
+            text-align: left;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(4,9,30,0.7);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%; 
+            left: 0;
+        }
+
+
+        .dropdown-content a {
+            color: #333; 
+            padding: 10px 16px; 
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s; 
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd; 
+            color:rgba(4,9,30,0.7);
+            font-weight: bold;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* footer */
+        .footer{
+            width:100%;
+            text-align:center;
+            padding:30px 0;
+        }
+
+        .footer h4{
+            margin-bottom:25px;
+            margin-top:20px;
+            font-weight:600;
+            color:#333
+        }
+        .footer p{
+
+            color:#333
+        }
+
+        .icons .fa{
+            color:#f44336;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+        }
+
+        .fa-heart-o{
+            color:#f44336
+
+        }
+        @media(max-width:700px){
+            .nav-links ul li{
+                display:block;
+                
+            }
+            .nav-links{
+                display:none; /*  WHY!!!!!!!!!!!!!!!!!!!! */
+                position:absolute;
+                background:#f44336;
+                height:100vh;
+                width:200px;
+                top:0;
+                right: -200px;
+                text-align:left;
+                z-index:2;
+                transition:1s;
+                
+            }
+            .nav-links{
+                right:-200px;
+
+            }
+            .nav-links ul li::after{
+                content:'';
+                width:0%;
+                height:2px;
+                background:white;
+                display:block;
+                margin:auto;
+                transition:  0.5s;
+                position: absolute; 
+                bottom: 6px; 
+                left: 10px; 
+
+            }
+            .nav-links ul li:hover::after {
+                width: 70%; 
+            }
+            .dropdown-content {
+                background-color: white;
+            }
+            
+            .dropdown-content a {
+
+                background-color:white;
+                color: black !important;
+            }
+            
+            .dropdown-content a:hover {
+                background-color: white ; 
+                color:#f44336 ;
+                font-weight: none !important;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: block;
+                color:#f44336;
+                font-weight: none !important;
+            }
+            nav .fa{
+                display:block;
+                color:#fff;
+                margin:10px;
+                font-size:22px;
+                cursor: pointer;
+            }
+            .nav-links ul{
+                padding:30px;
+            }
+
         }
     </style>
     <script>
