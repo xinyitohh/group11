@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Court Rental Services - APU Badminton Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="header-court">
+        <div class="text-box">
+            <h1>Share Your Thoughts With Us</h1>
+            <p>We value your feedback! Let us know how we can improve.</p>
+            <!-- <a href="#health-tips-section" class="hero-btn">Explore Tips</a> -->
+        </div>
+    </section>
+
+    <!-- Court Rental Options -->
+    <section class="feedback-form">
+        <h1>Feedback Form</h1>
+        <div class="feedback">
+            
+            <form id="feedForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" >
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" >
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" >
+            <label for="message">Message:</label>
+            <textarea id="height" name="message" required style="width: 100%; height: 100px;"></textarea>
+            <!-- <button type="submit">Submit Feedback</button> -->
+            <div class="row">
+                <button type="submit" class="submit-btn"> Submit Feedback</button>
+            </div>
+        </form>
+        
+        <div id="confirmationMessage" style=" margin-top: 25px; opacity: 0; transition:1.5s; text-align: center;">
+            <p>Thank you for your feedback ^_^</p>
+        </div>
+        </div>
+        
+    </section>
+
+    <section class="additionalfeed1">
+        <section class="additional-content">
+            <h1>Other Ways to Share Your Feedback</h1>
+            <h3>In addition to the feedback form, there are other ways you can share your thoughts and suggestions with us:</h3>
+            <div class="additionalfeed">
+                <div class="row1">
+                    <div class="col1">Email:</div>
+                    <div class="col2">Send us an email at feedback@apubadmintonclub.com with your feedback and suggestions.<br> <a href="mailto:feedback@apubadmintonclub.com?subject=Feedback" >Drop an email</a></div>
+                </div>
+                <div class="row1">
+                    <div class="col1">Social Media:</div>
+                    <div class="col2">Follow us on social media and leave comments or messages with your feedback.</div>
+                </div>
+                <div class="row1">
+                    <div class="col1">Feedback Box:</div>
+                    <div class="col2">Visit our facility and drop your feedback in the designated feedback box located near the entrance.</div>
+                </div>
+            </div>
+            <p>We value all feedback and strive to continually improve our services based on your input. Thank you for helping us serve you better!</p>
+        </section>
+    </section>
+    
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Experience premier badminton with our state-of-the-art facilities and passionate community. Join us for a game, training, or event.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club</p>
+    </section>
+
+    <script src="nav.js"></script>
+    <script>   
+    // booking confirmation
+    document.getElementById("feedForm").addEventListener("submit",function(event){
+            event.preventDefault(); //prevent default action -> refresh
+            document.getElementById("confirmationMessage").style.opacity = "1"; //display
+            document.getElementById("feedForm").reset(); //reset
+        });
+
+
+    </script>
+</body>
+</html>

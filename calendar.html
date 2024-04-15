@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Event Calendar</title>
+    <style>
+        .event-calendar{
+            margin: 50px 10px 250px 200px;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px 0px rgba(0,0,0,0.5);
+            border-radius: 20px;
+        }
+
+        .calendar-header{
+            padding: 30px 0 0;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid;
+            font-size: 25px;
+        }
+
+        .calendar-item{
+            display: flex;
+            flex-direction: row;
+            width:60%;
+            margin: 20px 0;
+            border: 1px outset rgb(55, 55, 55,.3);
+            border-radius: 10px;
+        }
+        
+        .calendar-date{
+            background-color: rgb(0, 0, 0,.8);
+            color: white;
+            font-size:18px;
+            padding: 15px 25px;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            flex: 2;
+        }
+
+        .calendar-content{
+            padding: 0 20px;
+            align-self: flex-start;
+            flex:8;
+        }
+
+        .calendar-content p{
+            display: none;
+        }
+
+        .calendar-content button{
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+            background-color: rgb(255, 220, 46);
+            font-size: 10px;
+            width: 20%;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .calendar-content button:hover{
+            border: 1px solid rgb(255, 220, 46);
+            background-color: white;
+            color: rgb(102, 86, 7);
+            cursor: pointer;
+        }
+
+        @media (max-width:700px) {
+            .event-calendar{
+                width: 65%;
+            }
+
+            .calendar-item{
+                width: 80%;
+            }
+
+            .calendar-content button{
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- navigation bar -->
+     <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="header">
+        <div class="text-box">
+            <h1>Event Calendar</h1>
+            <p>Explore many fun and interesting events here!</p>
+        </div>
+    </section>
+
+    <section class="event-calendar">
+        <div class="calendar-header">
+            <h2>2024</h2>
+        </div>
+        <div class="calendar-item" id="item1">
+            <div class="calendar-date">
+                <h2>Apr</h2>
+                <h2>20-22</h2>
+            </div>
+            <div class="calendar-content">
+                <h3>Spring Smash 2024</h3>
+                <p>Get ready for the annual Spring Smash tournament where players from across the city come together to compete for glory. Join us for an action-packed weekend of intense matches and thrilling rallies!</p>
+                <br>
+                <p><b>Date:</b> April 20-22, 2024</p>
+                <p><b>Venue:</b> Badminton Arena, City Sports Complex</p>
+                <button type="button" onclick="showMore('item1')">Show Details</button>
+            </div>
+        </div>
+        <div class="calendar-item" id="item2">
+            <div class="calendar-date">
+                <h2>May</h2>
+                <h2>10-12</h2>
+            </div>
+            <div class="calendar-content">
+                <h3>City Cup Badminton Championship</h3>
+                <p>Come and participate in the prestigious City Cup Badminton Championship. Show off your skills and compete against top players in the city for the ultimate glory!</p>
+                <br>
+                <p><b>Date:</b> May 10-12, 2024</p>
+                <p><b>Venue:</b> Municipal Sports Hall</p>
+                <button type="button" onclick="showMore('item2')">Show Details</button>
+            </div>
+        </div>
+        
+        <div class="calendar-item" id="item3">
+            <div class="calendar-date">
+                <h2>Jun</h2>
+                <h2>15-17</h2>
+            </div>
+            <div class="calendar-content">
+                <h3>Summer Smash Open 2024</h3>
+                <p>Prepare yourself for the scorching heat of the competition at the Summer Smash Open 2024. Join us for an electrifying tournament filled with intense rallies and fierce battles!</p>
+                <br>
+                <p><b>Date:</b> June 15-17, 2024</p>
+                <p><b>Venue:</b> Sunshine Badminton Club</p>
+                <button type="button" onclick="showMore('item3')">Show Details</button>
+            </div>
+        </div>
+        
+        <div class="calendar-header">
+            <h2>2025</h2>
+        </div>
+        <div class="calendar-item" id="item4">
+            <div class="calendar-date">
+                <h2>Aug</h2>
+                <h2>22-25</h2>
+            </div>
+            <div class="calendar-content">
+                <h3>Midsummer Madness Badminton Tournament</h3>
+                <p>Experience the thrill of Midsummer Madness Badminton Tournament. Compete against enthusiasts from around the region and enjoy the festive atmosphere of summer!</p>
+                <br>
+                <p><b>Date:</b> August 22-25, 2024</p>
+                <p><b>Venue:</b> Community Recreation Center</p>
+                <button type="button" onclick="showMore('item4')">Show Details</button>
+            </div>
+        </div>
+        
+        <div class="calendar-item" id="item5">
+            <div class="calendar-date">
+                <h2>Sep</h2>
+                <h2>14-16</h2>
+            </div>
+            <div class="calendar-content">
+                <h3>Autumn Smash Invitational</h3>
+                <p>Embrace the colors of autumn at the Autumn Smash Invitational. Compete in this prestigious tournament and witness breathtaking matches amid the falling leaves!</p>
+                <br>
+                <p><b>Date:</b> September 14-16, 2024</p>
+                <p><b>Venue:</b> Forest Grove Sports Complex</p>
+                <button type="button" onclick="showMore('item5')">Show Details</button>
+            </div>
+        </div>
+        
+        <div class="calendar-item" id="item6">
+            <div class="calendar-date">
+                <h2>Nov</h2>
+                <h2>8-10</h2>
+            </div>
+            <div class="calendar-content">
+                <h3>Winter Smash Classic</h3>
+                <p>Shake off the chill with some hot badminton action at the Winter Smash Classic. Join us for a thrilling tournament filled with excitement and camaraderie!</p>
+                <br>
+                <p><b>Date:</b> November 8-10, 2024</p>
+                <p><b>Venue:</b> Iceberg Badminton Center</p>
+                <button type="button" onclick="showMore('item6')">Show Details</button>
+            </div>
+        </div>
+        <script src="scriptyule.js"></script>
+    </section>
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-section {
+    width: 45%;
+    margin-left: 100px;
+
+}
+.map-section{
+   
+    margin-right: 80px;
+
+    
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section form input,
+.form-section form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-section form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    .contact-page {
+        flex-direction: column;
+    }
+
+    .form-section,
+    .map-section {
+        width: 100%;
+    }
+}
+.gmap_canvas{
+    border-radius: 20px;
+    margin-top: 40px;
+    
+}
+.name-input{
+    width: 70%;
+    height: 20px;
+    background-color: rgb(229, 243, 243);
+   
+}
+.email-input{
+    width: 70%;
+    height: 20px;
+    background-color: rgb(229, 243, 243);
+   
+}
+.msg-input{
+    width: 70%;
+    height: 60px;
+    background-color: rgb(229, 243, 243);
+   
+}
+
+.form-btn{
+    background: linear-gradient(to right, #000428, #004e92);
+    height: 50px;
+    width: 75%;
+    border-radius: 5px;
+}
+.contact-form{
+    margin-left: 50px;
+    margin-top: 50px;
+    
+}
+.location-info{
+    display: flex;
+    flex-direction: row;
+
+}
+.location-img{
+    height: 30px;
+    width: 10%;
+    margin-left: 20px;
+}
+.location-text{
+    height: 20px;
+    width: 100%;
+    margin-left: 20px;
+    color: #000;
+}
+.location-symbol{
+    height: 30px;
+    width: 100%;
+}
+
+.call-info{
+    display: flex;
+    flex-direction: row;
+
+}
+.call-img{
+    height: 30px;
+    width: 10%;
+    margin-left: 20px;
+}
+.call-text{
+    height: 20px;
+    width: 100%;
+    margin-left: 20px;
+    color: #000;
+}
+.call-symbol{
+    height: 30px;
+    width: 100%;
+}

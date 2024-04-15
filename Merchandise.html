@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="Merchandise.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="Merchandise-hero">
+
+        <img class="Merchandise-hero-img" src="images/Merchandise-Hero.png">
+    </div>
+
+    <div class="container">
+        <div class="slider-wrapper">
+          <button id="prev-slide" class="slide-button material-symbols-rounded">
+            chevron_left
+          </button>
+          <ul class="image-list">
+            <img class="image-item" src="images/1.png" alt="img-1" />
+            <img class="image-item" src="images/2.png" alt="img-2" />
+            <img class="image-item" src="images/3.png" alt="img-3" />
+            <img class="image-item" src="images/4.png" alt="img-4" />
+            <img class="image-item" src="images/5.png" alt="img-5" />
+            <img class="image-item" src="images/6.png" alt="img-6" />
+            <img class="image-item" src="images/7.png" alt="img-7" />
+            <img class="image-item" src="images/8.png" alt="img-8" />
+            <img class="image-item" src="images/9.png" alt="img-9" />
+           
+          </ul>
+          <button id="next-slide" class="slide-button material-symbols-rounded">
+            chevron_right
+          </button>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+          </div>
+        </div>
+      </div>
+
+    <script>
+        const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+        </script>
+
+<div class="product-card">
+    <img src="images/10.png" alt="Product 1">
+    <div class="product-info">
+        <h2>Soft White T Shirt</h2>
+        <p class="price">$19.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/11.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Soft T Shirt</h2>
+        <p class="price">$20.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="images/12.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Base Ball Helmet</h2>
+        <p class="price">$19.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/13.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Cricket Set</h2>
+        <p class="price">$10.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="images/14.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Sports Helmet</h2>
+        <p class="price">$9.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="images/15.png" alt="Product 2">
+    <div class="product-info">
+        <h2>FootBall</h2>
+        <p class="price">$33.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/16.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Neon Sports Shoes</h2>
+        <p class="price">$29.2</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/17.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Sports Shoes with Football</h2>
+        <p class="price">$40.2</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/18.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Sports T Shirt</h2>
+        <p class="price">$33.3</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="images/19.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Sneakers</h2>
+        <p class="price">$34.1</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="images/20.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Cricket Bat</h2>
+        <p class="price">$34.2</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/21.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Base Ball Set</h2>
+        <p class="price">$22.2</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/22.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Glove with Ball</h2>
+        <p class="price">$21.39</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/1.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Shirt with Cap</h2>
+        <p class="price">$29.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="images/2.png" alt="Product 2">
+    <div class="product-info">
+        <h2>bedMinton</h2>
+        <p class="price">$29.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+<div class="product-card">
+    <img src="images/3.png" alt="Product 2">
+    <div class="product-info">
+        <h2>Base Ball Bat</h2>
+        <p class="price">$29.99</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+</section>
+
+</body>
+</html>

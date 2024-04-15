@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .header{
+    min-height:100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/apu.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+    .text-box{
+    width:100%;
+    height:100%;
+    color:#fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-box h1{
+    font-size:62px;
+    margin-top:230px;
+}
+.text-box p{
+    margin:10px 0 40px;
+    font-size:14px;
+    color:#fff;
+}
+.hero-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid #fff;
+    padding:12px;
+    font-size:13px;
+    background:transparent;
+    position:relative;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+
+    <section class="header">
+        <!-- <div class="slideshow-container"> -->
+            <div class="text-box slide fade" style="background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/apu.jpg);">
+                <h1>APU Badminton Club</h1>
+                <p>Engage in thrilling matches, improve your skills, and be part of our badminton community. Whether you're a beginner or an experienced player, there's a place for you here.</p>
+                <a href="membership.html" class="hero-btn">Become a Member</a>
+                <!-- <h1>Join Our Badminton Club</h1>
+                <p>Challenge yourself, meet new friends, and improve your badminton skills with us. Become a part of our community today!</p>
+                <a href="#" class="hero-btn">Sign Up Now</a> -->
+            </div>
+            
+            <div class="text-box slide fade" style="background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/apu3.jpg);">
+                <h1>Upcoming Tournament</h1>
+                <p>Get ready to compete in our upcoming badminton tournament. Prepare yourself for intense matches and exciting prizes!</p>
+                <a href="tournament.html" class="hero-btn">Learn More</a>
+            </div>
+            
+            <div class="text-box slide fade" style="background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/apu2.jpg);">
+                <h1>Court Rental</h1>
+                <p>Rent our courts to enjoy a game of badminton. Whether you're practicing alone or with friends, our well-maintained courts provide the perfect setting for an enjoyable game!</p>
+                <a href="courtrental.html" class="hero-btn">View Schedule</a>
+            </div>
+        <!-- </div> -->
+    </section>
+
+    <!-- <section class="header">
+
+        <div class="text-box">
+            <h1>APU Badminton Club</h1>
+            <p>Engage in thrilling matches, improve your skills, and be part of our badminton community. Whether you're a beginner or an experienced player, there's a place for you here.</p>
+            <a href="" class="hero-btn">Become a Member</a>
+        </div>
+    </section> -->
+
+    <!-- Events -->
+    <section class="course">
+        <h1>Upcoming Events</h1>
+        <p>From beginner training sessions to inter-university tournaments, check out what's coming up.</p>
+        
+        <div class="row">
+            <div class="course-col">
+                <h3>Beginner Training</h3>
+                <p>Designed for newcomers to learn the basics of badminton and get ready for competitive play.</p>
+            </div>
+            <div class="course-col">
+                <h3>Monthly Meetups</h3>
+                <p>Join us every month for friendly matches, skill-building workshops, and social events.</p>
+            </div>
+            <div class="course-col">
+                <h3>Annual Championship</h3>
+                <p>Compete in our club's most prestigious event, showcasing the top talent in our university.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="campus">
+        <h1>Gallery</h1>
+        <p>Take a peek at our recent events, workshops, and tournaments.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/workshop.jpg" style="object-fit: cover;width: 100%;height: 100%;"">
+                <div class="layer">
+                    <h3>Workshop Session</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/meetup.jpg" style="object-fit: cover;width: 100%;height: 100%;">
+                <div class="layer">
+                    <h3>Monthly Meetup</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/champion.jpg" style="object-fit: cover; width: 100%; height: 100%;">
+                <div class="layer">
+                    <h3>Annual Championship</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Top-notch facilities to enhance your playing experience and skill development.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/library.png">
+                <h3>Professional Courts</h3>
+                <p>Experience playing on courts designed for top-level competitive badminton.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/basketball.png">
+                <h3>Quality Equipment</h3>
+                <p>Access to high-quality rackets, shuttles, and gear to improve your game.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/cafeteria.png">
+                <h3>Training Sessions</h3>
+                <p>Regular training sessions with professional coaches to sharpen your skills and game strategies.</p>
+            </div>
+            
+        </section>
+    
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h1>What Our Members Say</h1>
+            <p>Hear from our club members about their experiences and how badminton has impacted their lives at APU.</p>
+            <div class="row">
+                <div class="testimonial-col">
+                    <img src="images/testimonial1.jpg">
+                    <div>
+                        <p>Joining the APU Badminton Club was one of the best decisions I've made at university. It's not just about the game; it's about the friendships and the life lessons learned along the way.</p>
+                        <h3>Timothy Toh Xin Yi</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+                <div class="testimonial-col">
+                    <img src="images/dog.jpg">
+                    <div>
+                        <p>The club is incredibly welcoming, and the training sessions have really helped me improve my game. Plus, the competitive yet friendly atmosphere is something I always look forward to.</p>
+                        <h3>Tiffany Yeo Yo Le</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+        </section>
+    
+        <!-- JavaScript for Toggle Menu -->
+        <script src="nav.js"></script>
+        <script>
+            
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let slides = document.querySelectorAll('.slide');
+                
+                // Hide all slides
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';  
+                }
+                
+                // Increment slideIndex and reset to 0 if it exceeds the number of slides
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                
+                // Display the current slide
+                slides[slideIndex-1].style.display = 'block';  
+                
+                // Change slide every 5 seconds
+                setTimeout(showSlides, 4000); // Change slide every 5 seconds
+            }
+        </script>
+    
+    </body>
+    </html>
+    
+               

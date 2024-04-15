@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+    .header{
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("images/about.jpg");
+    }
+
+    h2{
+        font-size: 60px;
+    }
+    
+    .services{
+        margin:60px 10px 250px 200px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .story{        
+        flex-direction: row;
+    }
+
+
+    .story h2{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    }
+
+
+    .services img{
+        margin-right: 30px;
+        box-shadow: 10px 10px 20px #363636;
+        height:400px;
+        width: 30%;
+    }
+
+    .services p{
+        font-size: 16px;
+        color: #363636;
+    }
+
+    .box-wrapper{
+        display: flex;
+        flex-grow: 1;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .box{
+        border: 2px solid #9d3b3b;
+        border-radius: 5%;
+        margin-right: 40px;
+        flex:1;
+        background-color: #fff3f3;
+        padding: 20px;
+    }
+
+    .box i{
+        padding: 45px;
+        font-size: 80px;
+        color: #9d3b3b;
+        margin-left: 50px;
+    }
+
+    .vision-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vision-wrapper p{
+        font-size: 18px;
+    }
+
+    .vision-content{
+        align-items: center;
+    }
+
+    @media (max-width:700px){
+        .services{
+            width: 50%;
+        }
+
+        .services img{
+            height: 300px;
+            width: 300px;
+        }
+
+        .story{
+            flex-direction: column;
+        }
+
+        .box-wrapper{
+            flex-direction: column;
+        }
+
+        .box{
+            margin-top: 30px;
+        }
+
+        .box i{
+            padding: 25px;
+            font-size: 60px;
+        }
+
+        .vision-wrapper{
+            flex-direction: column;
+        }
+
+        .vision-content{
+            margin-bottom: 30px;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+
+<div class="header">
+    <div class="text-box">
+        <h1>About Us</h1>
+        Learn more about us!!!
+    </div>
+</div>
+
+<div class="services-wrapper">  
+    <div class="services story" id="history">
+        <img src="images/pou.png" alt="our story">
+        <div>
+            <h2>Our</h2>
+            <h2>Stories</h2>
+            <p><strong>The APU Badminton Club</strong> has a rich and storied history dating back to 2024. Initially formed by a small group of badminton enthusiasts, the club quickly gained popularity among students who shared a passion for the sport. What began as casual matches on campus soon evolved into organized training sessions, friendly competitions, and participation in intercollegiate tournaments.</p>     
+            <p>Over the years, the club has witnessed remarkable growth, both in membership and in its impact on campus life. Through the dedication of its members and the support of the university community, the University Badminton Club has become a cornerstone of sports culture, fostering a sense of camaraderie and sportsmanship among students.</p>
+            <p>Today, the club stands as a testament to the enduring legacy of its founders and the countless individuals who have contributed to its success. From its humble beginnings to its present-day prominence, the University Badminton Club continues to uphold its tradition of excellence, welcoming new generations of players and inspiring a lifelong love for the sport.</p>
+        </div>
+    </div>
+    
+    <div class="services">
+        <h2>Our Mission </h2>
+        <h3 style="font-size: larger;">WHAT WE DO</h3>
+        <div class="box-wrapper">
+            <div class="box">
+                <i class='bx bxs-heart'></i>
+                <h3>Promote Healthy Lifestyle</h3>
+                <p>Our mission is to promote a healthy and active lifestyle among students through the sport of badminton</p>
+            </div>
+            <div class="box">
+                <i class='bx bxs-trophy'></i>
+                <h3>Create Inclusive Environment</h3>
+                <p>We strive to create an inclusive environment where members can improve their skills, engage in friendly competition, and develop lifelong bonds with fellow players</p>
+            </div>
+            <div class="box">
+                <i class='bx bxs-user'></i>
+                <h3>Cultivate Badminton Community</h3>
+                <p>To cultivate a community where the joy of badminton transcends mere sport, fostering resilience, leadership, and a sense of belonging among students as they embark on a journey of holistic development.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services vision">
+        <h2>Vision</h2>
+        <div class="vision-wrapper">
+            <div class="vision-content">
+                <br>
+                <p>Our vision is to become <strong>the premier badminton club in the region</strong>, known for our excellence on the court and our contributions to the community off the court.</p>
+                <br><br>
+                <hr>
+                <br><br> 
+                <p>We aim to <strong>inspire a new generation of badminton players</strong>, fostering a passion for the sport that extends beyond the university.</p>
+            </div>
+        <img src="images/pou.png" alt="vision" style="margin-left: 60px;">
+        </div>        
+    </div>
+</div>
+
+<!-- Footer -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+</section>
+
+</body>
+</html>

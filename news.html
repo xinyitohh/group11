@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Club News</title>
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        img {vertical-align: middle;}
+
+        .mySlides {
+            display: none;
+            flex: 0 0 50%;
+        }
+
+        .news-item{
+            flex: 0 0 50%;
+            padding: 20px;
+        }
+
+        .news-item h3{
+            color:white;
+        }
+
+        .news-box{
+            background-color: rgb(143, 255, 255, .3);
+            padding:50px 0;
+        }
+
+        .news-header{
+            background-color: rgb(6, 2, 70);
+            color: white;
+            width: 100%;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1200px;
+            position: relative;
+            margin: auto;
+            background-color:rgb(2, 1, 27) ;
+        }
+
+        .mySlides img{
+            height: 400px;
+            flex: 0 0 50%;
+            width: 50%;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        background-color:rgb(143, 255, 255,.3) ;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: rgb(143, 255, 255,.7);
+        }
+
+        /* Caption text */
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        .event-header{
+            border: 1px solid rgba(0, 0, 0, 0.515);
+            background-color: rgb(6, 2, 70);
+            color: white;
+            padding: 15px 0 15px 30px;
+            border-radius: 20px;
+        }
+
+        .picture-box{
+            height: 450px;
+        }
+
+        .picture-box p{
+            display: none;
+        }
+
+        .picture-box div, .news-item div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .photo{
+            width: calc(100% + 60px);
+        }
+
+        button{
+            padding:10px 20px;
+            border-radius: 15px;
+            background-color: rgb(231, 28, 28);
+            color: white;
+            font-size: 15px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: white;
+            border: 1px solid rgb(231, 28, 28);
+            color: rgb(231, 28, 28);
+            cursor: pointer;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media(max-width:700px) {
+        .prev, .next,.text {
+            font-size: 11px;
+            top: 35%;
+        }
+
+        .mySlides{
+            flex-direction: column;
+        }
+
+        .mySlides img{
+            width: 100%;
+        }
+
+        .slideshow-container{
+            max-width: 600px
+        }
+
+        .picture-box-wrapper{
+            flex-direction: column;
+        }
+
+        .picture-box{
+            width: 40%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="header">
+        <div class="text-box">
+            <h1>Club News</h1>
+            Get the latest news about us now
+        </div>
+    </div>
+
+    <div class="news-box">     
+        <div class="slideshow-container">
+            <div class="news-header">
+                <h2>Latest News</h2>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/banner.png" alt="news1">
+                <div class="news-item">
+                    <h3 class="news-title">APU Badminton Club Wins Regional Tournament</h3>
+                    <p class="news-description">The APU Badminton Club emerged victorious in the recent regional badminton tournament held in Bukit Jalil. The team displayed exceptional skills and sportsmanship throughout the competition, securing the top position and bringing home the championship trophy.</p>
+                    <br><br><br>
+                    <div><button type="button" onclick="passValue('article1')">Learn More</button></div>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/banner2.jpg" alt="news2">
+                <div class="news-item">
+                    <h3 class="news-title">National Badminton Player Joins University Badminton Club</h3>
+                    <p class="news-description">We are thrilled to announce that Ali, a prominent national badminton player, has joined the APU Badminton Club. Their expertise and experience will undoubtedly contribute to the club's success and inspire our members to strive for excellence.</p>
+                    <br><br><br>
+                    <div><button type="button" onclick="passValue('article2')">Learn More</button></div>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/certificate.jpg" alt="news3">
+                <div class="news-item">
+                    <h3 class="news-title">APU Badminton Club Hosts Inter-University Tournament</h3>
+                    <p class="news-description">The University Badminton Club is proud to host an inter-university badminton tournament next month. Teams from various universities across the country will compete in both singles and doubles categories. This event aims to promote friendly competition and foster camaraderie among university badminton enthusiasts.</p>
+                    <br><br><br>
+                    <div><button type="button" onclick="passValue('article3')">Learn More</button></div>
+                </div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>          
+        </div>
+        <div style="text-align:center;padding-top: 20px;">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+        
+
+        <section class="benefits">
+            <div class="event-header">
+                <h2>UPCOMING EVENTS</h2>
+            </div>
+            <div class="picture-box-wrapper">
+                <div class="picture-box" onmouseleave="showPhoto(event)">
+                    <div class="photo">
+                        <img src="images/user1.jpg" alt="event1">
+                    </div>
+                    <h3>Tournament: Spring Smash 2024</h3>
+                    <div><button type="button" onclick="showDetails(event)">Learn More</button></div>
+                    <p><b>Date:</b> April 20-22, 2024</p>
+                    <p><b>Venue:</b> Badminton Arena, City Sports Complex</p>
+                    <p><b>Description:</b> Get ready for the annual Spring Smash tournament where players from across the city come together to compete for glory. Join us for an action-packed weekend of intense matches and thrilling rallies!</p>
+                </div>
+                <div class="picture-box" onmouseleave="showPhoto(event)">
+                    <div class="photo">
+                        <img src="images/pou.png" alt="event2">
+                    </div>
+                    <h3>Talk: Mastering the Serve Technique</h3>
+                    <div><button type="button" onclick="showDetails(event)">Learn More</button></div>
+                    <p><b>Date:</b> May 5, 2024</p>
+                    <p><b>Time:</b> 6:00 PM - 8:00 PM</p>
+                    <p><b>Venue:</b> Clubhouse Conference Room</p>
+                    <p><b>Description:</b> Join us for an informative talk by renowned badminton coach, Coach Smith, as he shares his expertise on mastering the serve technique. Whether you're a beginner or an experienced player, you'll learn valuable tips to improve your game!</p>
+                </div>
+                <div class="picture-box" onmouseleave="showPhoto(event)">
+                    <div class="photo">
+                        <img src="images/pou.png" alt="event3">
+                    </div>
+                    <h3>Workshop: Footwork Fundamentals</h3>
+                    <div><button type="button" onclick="showDetails(event)">Learn More</button></div>
+                    <p><b>Date:</b> May 15, 2024</p>
+                    <p><b>Time:</b> 9:00 AM - 12:00 PM</p>
+                    <p><b>Venue:</b> Training Hall A</p>
+                    <p><b>Description:</b> Enhance your footwork skills with our comprehensive workshop on footwork fundamentals. Led by experienced coaches, this workshop is perfect for players looking to refine their agility and movement on the court!</p>
+                </div>
+                <div class="picture-box" onmouseleave="showPhoto(event)">
+                    <div class="photo">
+                        <img src="images/pou.png" alt="event4">
+                    </div>
+                    <h3>Community Event: Badminton Fun Day</h3>
+                    <div><button type="button" onclick="showDetails(event)">Learn More</button></div>
+                    <p><b>Date:</b> May 25, 2024</p>
+                    <p><b>Time:</b> 10:00 AM - 4:00 PM</p>
+                    <p><b>Venue:</b> City Park Badminton Courts</p>
+                    <p><b>Description:</b> Join us for a day of fun-filled badminton activities at our Community Badminton Fun Day! Whether you're a beginner or a seasoned player, come and enjoy friendly matches, coaching sessions, and exciting games with fellow badminton enthusiasts!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="event-header">
+                <h2>ARTICLES</h2>
+            </div>
+            <div class="picture-box-wrapper">
+                <div class="picture-box" id="article1">
+                    <div class="photo">
+                        <img src="images/banner.png" alt="article1">
+                    </div>
+                    <h3>APU Badminton Club Wins Regional Tournament</h3>
+                    <div><button type="button" onclick="passValue('article1')">Learn More</button></div>
+                    <p>The APU Badminton Club emerged victorious in the recent regional badminton tournament held in Bukit Jalil. The team displayed exceptional skills and sportsmanship throughout the competition, securing the top position and bringing home the championship trophy.</p>
+                </div>
+                <div class="picture-box" id="article2">
+                    <div class="photo">
+                        <img src="images/banner2.jpg" alt="article2">
+                    </div>
+                    <h3>National Badminton Player Joins University Badminton Club</h3>
+                    <div><button type="button" onclick="passValue('article2')">Learn More</button></div>
+                    <p>We are thrilled to announce that Ali, a prominent national badminton player, has joined the APU Badminton Club. Their expertise and experience will undoubtedly contribute to the club's success and inspire our members to strive for excellence.</p>
+                </div>
+                <div class="picture-box" id="article3">
+                    <div class="photo">
+                        <img src="images/certificate.jpg" alt="article3">
+                    </div>
+                    <h3>APU Badminton Club Hosts Inter-University Tournament</h3>
+                    <div><button type="button" onclick="passValue('article3')">Learn More</button></div>
+                    <p>The University Badminton Club is proud to host an inter-university badminton tournament next month. Teams from various universities across the country will compete in both singles and doubles categories. This event aims to promote friendly competition and foster camaraderie among university badminton enthusiasts.</p>
+                </div>
+            </div>
+
+        </section>
+        
+        <!-- Footer -->
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+        </section>
+        <script src="scriptyule.js"></script>
+</body>
+</html>

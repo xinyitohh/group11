@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Court Rental Services - APU Badminton Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="header-court">
+        <div class="text-box">
+            <h1>Rent a Court for Your Next Game</h1>
+            <p>Discover the best badminton experience with our court rental services, suitable for both practice sessions and competitive events.</p>
+            <a href="#booking-form" class="hero-btn">Book Now</a> <!-- Update link -->
+        </div>
+    </section>
+    
+    <!-- Court Rental Options -->
+    <section class="course">
+        <h1>Court Rental for Events & Practice Sessions</h1>
+        <p>Choose from our selection of high-quality courts perfect for every level of play.</p>
+        
+        <div class="row">
+            <div class="course-col">
+                <h3>Standard Court</h3>
+                <p>Ideal for practice sessions and casual games, our standard courts provide a great environment for improving your skills.</p>
+            </div>
+            <div class="course-col">
+                <h3>Competition Court</h3>
+                <p>Fully equipped to meet tournament standards, these courts offer the perfect setting for hosting competitive matches.</p>
+            </div>
+            <div class="course-col">
+                <h3>Training Court</h3>
+                <p>With additional features like training aids and machines, these courts are designed for focused skill development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Highlights -->
+    <section class="campus">
+        <h1>Facility Highlights</h1>
+        <p>Take a closer look at our top-notch badminton facilities designed for all levels of players.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/apu.jpg"> <!-- Update image path -->
+                <div class="layer">
+                    <h3>Indoor Courts</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/court2.png"> <!-- Update image path -->
+                <div class="layer">
+                    <h3>Lighting & Equipment</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/court3.png"> <!-- Update image path -->
+                <div class="layer">
+                    <h3>Player Lounge</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="courtmap">
+        <h1>Location & Directions</h1>
+        <p>Find us at the following address and get directions to our badminton club.</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1466075748294!2d101.69798647567603!3d3.0554110537202788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1712900919689!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking-form"class="booking-form">
+        <h2>Book Your Court</h2>
+        <form id="bookingForm">
+            <div class="row">
+                <div class="col">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="duration">Duration:</label>
+                    <select id="duration" name="duration">
+                        <option value="1">1 Hour</option>
+                        <option value="2">2 Hours</option>
+                        <option value="3">3 Hours</option>
+                        <option value="4">4 Hours</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="type">Court Type:</label>
+                    <select id="type" name="type">
+                        <option value="standard">Standard Court</option>
+                        <option value="competition">Competition Court</option>
+                        <option value="training">Training Court</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row">
+                <button type="submit" class="submit-btn"> Submit Booking Request</button>
+            </div>
+        </form>
+
+        <div id="confirmationMessage" style=" margin-top: 25px; opacity: 0; transition:1.5s;">
+            <p>Thank you for your booking request. We will get back to you shortly.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Experience premier badminton with our state-of-the-art facilities and passionate community. Join us for a game, training, or event.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club</p>
+    </section>
+
+    <script src="nav.js"></script>
+    <script>
+        // booking confirmation
+        document.getElementById("bookingForm").addEventListener("submit",function(event){
+            event.preventDefault(); //prevent default action -> refresh
+            document.getElementById("confirmationMessage").style.opacity = "1"; //display
+            document.getElementById("bookingForm").reset(); //reset
+        });
+
+
+    </script>
+</body>
+</html>

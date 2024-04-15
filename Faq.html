@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        .faq-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            max-width: 600px; 
+            border: 3px solid #2196F3;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 9999;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+      
+        .faq-popup .header {
+            background: #2196F3;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            border-bottom: 2px solid #1976D2;
+        }
+
+        
+        .faq-popup .faq-list {
+            height: 300px; 
+            padding: 20px;
+            overflow-y: auto; 
+        }
+
+        /* Style each FAQ question */
+        .faq-popup .faq-list .faq-question {
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            color: #333; 
+        }
+
+       
+        .faq-popup .faq-list .faq-question:hover {
+            background: #f0f0f0;
+        }
+
+    
+        .faq-popup .faq-list .faq-answer {
+            display: none;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            color: #555; 
+        }
+
+        /* Animation for FAQ popup */
+        @keyframes slideInFromCenter {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        @keyframes slideOutToCenter {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0);
+            }
+        }
+
+        .faq-popup.open {
+            display: block;
+            animation: slideInFromCenter 0.5s forwards;
+        }
+
+        .faq-popup.close {
+            animation: slideOutToCenter 0.5s forwards;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Get the FAQ popup
+            var faqPopup = document.getElementById('faqPopup');
+
+            // Get all the FAQ questions
+            var faqQuestions = faqPopup.querySelectorAll('.faq-question');
+            faqQuestions.forEach(function(question) {
+                question.addEventListener('click', function() {
+                    // Toggle the display of the answer
+                    var answer = this.nextElementSibling;
+                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+
+           
+            setTimeout(function() {
+                faqPopup.classList.add('open');
+            }, 2000);
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="hero-section">
+        <img class="hero-img" src="images/hero.jpeg">
+      
+        <div class="hero-text">
+            <h1>FAQS</h1>
+            <p>GET YOUR ANSWERS HERE!</p>
+    </div>
+    </div>
+    <div id="faqPopup" class="faq-popup">
+        <div class="header">FAQs</div>
+        <div class="faq-list">
+            <div class="faq-question">How do I become a member?</div>
+            <div class="faq-answer" style="display: none;">To become a member, please visit our membership page and fill out the registration form. Once submitted, our team will review your application and get back to you as soon as possible.</div>
+            <div class="faq-question">What are the benefits of membership?</div>
+            <div class="faq-answer" style="display: none;">As a member, you'll have access to exclusive events, discounts on merchandise, and opportunities to participate in club activities and competitions.</div>
+            
+            <div class="faq-question">How can I register for upcoming events?</div>
+            <div class="faq-answer" style="display: none;">You can register for events through our website by visiting the Events page and selecting the event you're interested in. Follow the instructions provided to complete the registration process.</div>
+            <div class="faq-question">Are spectators allowed at events?</div>
+            <div class="faq-answer" style="display: none;">Yes, spectators are welcome to attend our events. However, please note that there may be certain restrictions or guidelines in place, so we recommend checking the event details for more information.</div>
+            
+            <div class="faq-question">What facilities do you offer?</div>
+            <div class="faq-answer" style="display: none;">Our facilities include a gym, swimming pool, tennis courts, and multipurpose sports fields. Members have access to all facilities during operating hours.</div>
+            <div class="faq-question">Are locker rooms available?</div>
+            <div class="faq-answer" style="display: none;">Yes, we have locker rooms equipped with showers and changing areas for the convenience of our members.</div>
+                
+        </div>
+        <!-- Add more questions and answers as needed -->
+    </div>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+
+        h3{
+            font-size: 23px;
+        }
+
+        .button{
+            flex-direction: row;
+            padding:20px 70px;
+            border-radius: 35px;
+            background-color: rgb(231, 28, 28);
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+        
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+
+        h2,.services h2{
+            display: flex;
+            justify-content: center;
+        }
+
+        .benefits{
+            margin:auto;
+            padding-top: 200px;
+            width: 90%;
+        }
+
+        .picture-box-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+        }
+
+        .picture-box{
+            border-radius: 30px;
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+            width: calc(25% - 80px);
+            margin: 20px auto;
+            height: 550px;
+            padding: 0 30px 0 30px;
+            overflow: hidden;
+        }
+
+        .picture-box .photo img{
+            width: calc(100% + 60px);
+            height: calc(570px * 0.4);
+            margin-left: -30px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            transition: 0.5s;
+        }
+
+        .picture-box:hover{
+            transition: 0.5s;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 0px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .picture-box:hover .photo img{
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
+
+        .picture-box p{
+            font-size: 16px;
+            color: rgb(73, 72, 72);
+        }
+
+        .join{
+            margin-top: 200px;
+            padding-bottom: 50px;
+            background-image:linear-gradient(rgba(4,9,30,0.9),rgba(4,9,30,0.9)),url(images/library.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .join li{
+            padding: 10px;
+            color: white;
+        }
+
+        .join-header{
+            background-color: black;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 23px;
+            color: white;
+        }
+
+        .join-header i{
+            margin-left: 30px;
+            font-size: 60px;
+        }
+
+        .step{
+            padding:50px 0 50px 100px;
+            display: flex;
+            flex-direction: column;
+            color:white;
+            font-size: 20px;
+        }
+
+        .signup {
+            background-color: #ffb6c1;
+            padding: 30px;
+            border-radius: 10px;
+            margin-left: 15%;
+        }
+
+        .signup h3 {
+            margin-bottom: 20px;
+        }
+
+        .name {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 10px;
+        }
+
+        .name div {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .name input {
+            width: 80%;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #dob, input[type="file"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #eb7373;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: white;
+            color: #eb7373;
+            cursor: pointer;
+        }
+
+        .wrapper{
+            display: flex;
+            flex: 1;
+            padding-top: 30px;
+        }
+
+        @media (max-width:700px){
+            .button{
+                padding: 20px 40px;
+            }
+
+            .picture-box{
+                width: 40%;
+            }
+
+            .wrapper{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="header">
+        <div class="text-box">
+            <h1>Membership Information</h1>
+            Become a member of our family now
+        </div>
+    </div>
+
+    <section class="course">
+        <h2>Types of Memberships</h2>
+        <div class="row">
+            <div class="course-col">
+                <h3>Student Membership</h3>
+                <p>Students studying at APU currently. Meet your badminton family here</p>
+            </div>
+            <div class="course-col">
+                <h3>Staff Membership</h3>
+                <p>Staff of APU just come. Have a break, have a APU Badminton Club Member</p>
+            </div>
+            <div class="course-col">
+                <h3>Alumni Membership</h3>
+                <p>Alumni...Assemble! Show your passion hereeeeee!!!</p>
+            </div>  
+        </div>
+        <a href="#join" class="button" style="vertical-align:middle"><span>Learn More </span></a>
+    </section>
+
+    <section class="benefits">
+        <h2>Membership Benefits:</h2>
+        <div class="picture-box-wrapper">
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/user1.jpg" alt="benefit1">
+                </div>
+                <h3>Access to club facilities</h3>
+                <p>Exclusive access to reserved courts during peak hours</p>
+                <p>Access to fitness and wellness programs tailored for badminton players</p>
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit2">
+                </div>
+                <h3>Participation in training sessions</h3>
+                <p>Specialized coaching sessions for members</p> 
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit3">
+                </div>
+                <h3>Opportunities to compete in tournaments</h3>
+                <p>Priority registration for club events and tournaments</p>
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit4">
+                </div>
+                <h3>Discounts on merchandise</h3>
+                <p>Members of this club can enjoy exclusive discounts on every merchandise</p>
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit5">
+                </div>
+                <h3>Access to social events</h3>
+                <p>Invitations to exclusive member-only social gatherings</p>
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit6">
+                </div>
+                <h3>Opportunities for leadership roles within the club</h3>
+                <p>Unlock the potential to expand and refine your leadership skills right here</p>
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit7">
+                </div>
+                <h3>Access to online resources and community</h3>
+                <p>Gain access to a comprehensive online platform where you can interact with fellow members, access training materials, and stay updated on club news and events</p>
+            </div>
+
+            <div class="picture-box">
+                <div class="photo">
+                    <img src="images/pou.png" alt="benefit8">
+                </div>
+                <h3>Discounted rates for guest passes</h3>
+                <p>Extend the benefits of club membership to friends and family by purchasing guest passes at discounted rates, allowing them to experience the club's facilities and programs firsthand</p>
+            </div>
+        </div>        
+    </section>    
+
+    <section class="join" id="join">
+        <div class="join-header">
+            <h2>How to Join<i class='bx bx-id-card'></i></h2>
+        </div>
+        <div class="wrapper">
+            <div class="step">
+                <h3 style="font-size: 50px;">Steps</h3>
+                <ol>
+                    <li>Fill out the online membership application form </li>
+                    <li>Pay the membership fee.</li>
+                    <li>Provide any required documentation</li>
+                    <li>Start enjoying the benefits of membership immediately!</li>
+                </ol>
+            </div>
+            <div class="signup">
+                <h3>Join as a member now</h3>
+                <div class="name">
+                    <div>
+                        <label for="first-name"><b>First Name</b></label><br>
+                        <input type="text" id="first-name">
+                    </div>
+                    <div>
+                        <label for="last-name"><b>Last Name</b></label><br>
+                        <input type="text" id="last-name">
+                    </div>
+                </div>
+                <br>
+                <label for="dob"><b>Date of Birth</b></label>
+                <input type="date" id="dob"><br><br>
+                <h4>Type</h4>
+                <input type="radio" id="student" name="type">
+                <label for="student">Student</label><br>
+                <input type="radio" id="staff" name="type">
+                <label for="staff">Staff</label><br>
+                <input type="radio" id="alumni" name="type">
+                <label for="alumni">Alumni</label><br><br>
+                <h4>Submit the related document</h4>
+                <input type="file"><br><br>
+                <button type="submit" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+        <script src="scriptyule.js"></script>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+    </section>
+</body>
+</html>

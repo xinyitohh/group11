@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Court Rental Services - APU Badminton Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="header-court">
+        <div class="text-box">
+            <h1>Badminton Rules</h1>
+            <p>Learn the official rules and regulations of badminton to play like a pro!</p>
+            <!-- <a href="#health-tips-section" class="hero-btn">Explore Tips</a> -->
+        </div>
+    </section>
+
+    <!-- Benefits -->
+   
+    <section class="benefits">
+        <h1>Basic Rules</h1>
+        <p>Here are some fundamental rules to understand before playing badminton:</p>
+        
+        <div class="container">
+            <div class="side-panel">
+                <button onclick="displayRule('service')">Service Rules</button>
+                <button onclick="displayRule('scoring')">Scoring System</button>
+                <button onclick="displayRule('faults')">Faults and Lets</button>
+                <button onclick="displayRule('line')">Line Calls</button>
+            </div>
+            <div class="rule-description">
+                <div id="service" class="rule-content" style="display: block;">
+                    <h2>Service Rules</h2>
+                    <p>The serving player must hit the shuttlecock below the waist with an underhand motion, and the serve must travel diagonally to the opponent's service court. Only one service attempt is allowed per player's turn, and points are scored on each serve.</p>
+                </div>
+                <div id="scoring" class="rule-content" style="display: none;">
+                    <h2>Scoring System</h2>
+                    <p>In standard badminton, a match is played to the best of three games. Each game is played to 21 points, with a player or team needing to win by a margin of at least two points. If the score reaches 20-all, the game continues until one player or team gains a two-point advantage.</p>
+                </div>
+                <div id="faults" class="rule-content" style="display: none;">
+                    <h2>Faults and Lets</h2>
+                    <p>A fault occurs when a player violates the rules, such as hitting the shuttlecock out of bounds, touching the net with their racket, or obstructing their opponent's shot. If a serve lands outside the proper service court, it is considered a fault. A let is called if play is interrupted by external factors such as a shuttlecock hitting the ceiling or a player's clothing.</p>
+                </div>
+                <div id="line" class="rule-content" style="display: none;">
+                    <h2>Line Calls</h2>
+                    <p>Players are responsible for making their own line calls, but they can request the umpire's assistance if there is a dispute. If the shuttlecock lands on the line, it is considered in. If it lands outside the line, it is considered out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="misconceptions-section">
+        <h1>Common Misconceptions</h1>
+        <div class="misconception">
+            <h3>Misconception: Serves Must Always Be Performed Underhand</h3>
+            <p>One common misconception is that serves in badminton must always be performed underhand. While underhand serves are common, players are allowed to use an overhand serve in certain situations, such as during doubles play or when attempting a high serve to the back of the court.</p>
+        </div>
+        <div class="misconception">
+            <h3>Misconception: Shuttlecock Must Not Touch the Ground</h3>
+            <p>Another misconception is that the shuttlecock must not touch the ground during a rally. In reality, the shuttlecock can touch the ground and still be considered in play as long as it lands within the boundaries of the court. However, if the shuttlecock touches the ground outside the court boundaries, it is considered out.</p>
+        </div>
+        <div class="misconception">
+            <h3>Misconception: Players Cannot Step on the Lines</h3>
+            <p>Some players believe that they cannot step on the lines of the badminton court during play. However, stepping on the lines is allowed, and players can even make shots while standing on the lines. The only time a line violation occurs is if the player's foot completely crosses over the line during the serve.</p>
+        </div>
+    </section>
+
+    
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Experience premier badminton with our state-of-the-art facilities and passionate community. Join us for a game, training, or event.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club</p>
+    </section>
+
+    
+    <script src="nav.js"></script>
+    <script>
+        
+function displayRule(rule) {
+    var ruleContents = document.getElementsByClassName("rule-content");
+    for (var i = 0; i < ruleContents.length; i++) {
+        ruleContents[i].style.display = "none";
+    }
+    document.getElementById(rule).style.display = "block";
+}
+    </script>
+</body>
+</html>

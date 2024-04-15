@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Court Rental Services - APU Badminton Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="header-court">
+        <div class="text-box">
+            <h1>Enhance Your Game with Health Tips</h1>
+            <p>Unlock your full potential on the badminton court with our expert advice on fitness, nutrition, and injury prevention.</p>
+            <!-- <a href="#health-tips-section" class="hero-btn">Explore Tips</a> -->
+        </div>
+    </section>
+
+    <!-- Court Rental Options -->
+    <section class="bmi-calculator">
+        <h1>BMI Calculator</h1>
+        <form id="bmiForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <div id="bmiResult" class="bmiResult"></div>
+    </section>
+
+    <!-- Benefits -->
+   
+    <section class="benefits">
+        <h1>Benefits of Playing Badminton</h1>
+        <p>Playing badminton offers a host of benefits for both body and mind. Here's why you should consider taking up the sport:</p>
+        
+        <div class="benefits-list">
+            <div class="row">
+                <article class="benefit-item">
+                    <h3>Full Body Workout</h3>
+                    <p>Badminton is a fast-paced sport that involves a lot of jumping, running, and swinging, providing a full-body workout that improves muscle tone and strength.</p>
+                </article>
+                <article class="benefit-item">
+                    <h3>Enhances Cardiovascular Health</h3>
+                    <p>The constant movement in badminton helps increase heart rate, improving blood circulation and overall cardiovascular health.</p>
+                </article>
+                <article class="benefit-item">
+                    <h3>Boosts Mental Acuity</h3>
+                    <p>Badminton requires strategic thinking and concentration, which can sharpen your cognitive skills and increase mental alertness.</p>
+                </article>
+            </div>
+            
+            <div class="row">
+                <article class="benefit-item">
+                    <h3>Improves Reflexes and Coordination</h3>
+                    <p>The quick turns and sprints in badminton enhance reflexes and hand-eye coordination, benefiting your dexterity and agility.</p>
+                </article>
+                <article class="benefit-item">
+                    <h3>Weight Loss and Management</h3>
+                    <p>As an intense aerobic sport, badminton can be a fun way to burn calories, which helps in weight loss and maintaining a healthy weight.</p>
+                </article>
+                <article class="benefit-item">
+                    <h3>Reduces Stress and Anxiety</h3>
+                    <p>Regularly playing badminton can reduce stress and anxiety levels. Physical activity releases endorphins, elevating your mood and creating a sense of well-being.</p>
+                </article>
+            </div>
+            
+            <!-- <article class="benefit-item">
+                <h3>Improves Lung Function</h3>
+                <p>Badminton players often have better lung health due to the requirement for efficient oxygen consumption during play.</p>
+            </article>
+            <article class="benefit-item">
+                <h3>Encourages Social Interaction</h3>
+                <p>Badminton is a great way to meet new people and socialize, promoting teamwork and communication when played in doubles.</p>
+            </article>
+            <article class="benefit-item">
+                <h3>Promotes Longevity</h3>
+                <p>Regular play can contribute to a longer life expectancy by keeping diseases at bay and maintaining overall health.</p>
+            </article> -->
+        </div>
+    </section>
+    
+
+    <!-- Health Tips -->
+    <section class="health-tips">
+        <h1>Fitness and Health Tips</h1>
+        <p>Enhance your game with our expert articles on badminton fitness, injury prevention, and proper nutrition.</p>
+        
+        <div class="row">
+            <div class="health-tip-col">
+                <h3>Badminton Fitness</h3>
+                <p>Boost your agility and on-court performance with tailored exercises and training routines specifically designed for badminton players.</p>
+            </div>
+            <div class="health-tip-col">
+                <h3>Injury Prevention</h3>
+                <p>Learn how to prevent common badminton injuries with our preventative tips and advice from sports health professionals.</p>
+            </div>
+            <div class="health-tip-col">
+                <h3>Nutrition Guide</h3>
+                <p>Optimize your diet for better energy, recovery, and overall health with our comprehensive nutrition guide for badminton players.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Experience premier badminton with our state-of-the-art facilities and passionate community. Join us for a game, training, or event.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club</p>
+    </section>
+
+    <script src="nav.js"></script>
+    <script>
+
+        // BMI Calculator
+        document.getElementById("bmiForm").addEventListener("submit",function(event){
+            event.preventDefault();
+            var weight = parseFloat(document.getElementById("weight").value);
+            var height = parseFloat(document.getElementById("height").value)/100; //m
+            var bmi = weight / (height * height);
+            bmi = bmi.toFixed(2);
+            var result;
+            if (bmi < 18.5) {
+                result = "underweight";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                result = "normal";
+            } else if (bmi >= 25 && bmi < 30) {
+                result = "overweight";
+            } else {
+                result = "obese";
+            }
+
+            document.getElementById("bmiResult").textContent = `Your BMI is ${bmi}, indicating you are ${result}.`;
+        })
+        window.onscroll = function() {
+    scrollFunction();
+};
+
+    </script>
+</body>
+</html>
