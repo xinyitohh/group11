@@ -71,24 +71,31 @@ function passValue(articleId) {
 }
 
 function showMore(id){
-  var content = document.getElementById(id);
-  var paragraphs = content.querySelectorAll('p');
-  var button = content.querySelectorAll('button');
-  var date = content.getElementsByClassName('calendar-date');
+  var item = document.getElementById(id);
+  var paragraphs = item.querySelectorAll('p');
+  var button = item.querySelectorAll('button');
+  var date = item.getElementsByClassName('calendar-date');
+  var content = item.getElementsByClassName('calendar-content');
   if (button[0].innerText === 'Show Details') {
     paragraphs.forEach(function(p) {
       p.style.display = 'block';
       p.style.color = 'black';
     });
     button[0].innerText = 'Close';
-    date[0].style.display = 'none';
+    date[0].style.transition = 'transform 0.5s ease-out';
+    date[0].style.transform = 'translateX(-100%)';
+    content[0].style.transition = 'transform 0.5s ease-out';
+    content[0].style.transform = 'translateX(-30%)';
   }
   else if (button[0].innerText === 'Close') {
     paragraphs.forEach(function(p) {
       p.style.display = 'none';
     });
     button[0].innerText = 'Show Details';
-    date[0].style.display = 'block';
+    date[0].style.transition = 'transform 0.5s ease-in-out';
+    date[0].style.transform = 'translateX(0%)';
+    content[0].style.transition = 'transform 0.5s ease-in-out';
+    content[0].style.transform = 'translateX(0%)';
     return;
   }
 }
