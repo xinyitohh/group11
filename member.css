@@ -1,0 +1,136 @@
+﻿body {
+	margin: 0;
+	padding: 0px 0px;
+	height: 100%;
+	box-sizing:border-box;
+	font-family:sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif;
+}
+.text-box {
+	position:absolute;
+	height: 400px;
+	background-color:#4F5261;
+	width: 100%;
+	margin-top: -80px;
+	color:#FFFFFF;
+	justify-content: center;
+	align-items: center;
+}
+.text-box h1 {
+	font-size: 50px;
+	margin-top: 90px;
+}
+.text-box p {
+	text-align: center;
+	font-size: 16px;
+	padding: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	margin:auto;
+	margin-top: 500px;
+	margin-bottom: 50px;
+}
+.our-team {
+	background: #9AC8CD;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	margin: 0px 20px;
+	padding:30px 50px;
+	border-radius: 6px;
+	
+}
+
+.our-team .pic {
+	display: inline-block;
+	width: 130px;
+	height: 130px;
+	margin-bottom: 0px;
+	z-index: 1;
+	position: relative;
+}
+
+.our-team .pic::before {
+	content: "";
+	width: 100%;
+	height: 0;
+	border-radius: 50%;
+	background: #E1F7F5;
+	position: absolute;
+	bottom: 135%;
+	right: 0;
+	left: 0;
+	opacity: 0.3;
+	transform: scale(2);
+	transition: all 0.3s linear 0s;
+	
+}
+
+.our-team:hover .pic::before{
+	height: 100%;
+}
+
+.our-team .pic::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #1E0342;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.3;	
+	z-index: -1;
+}
+
+.our-team .pic img {
+	width: 100%;
+	height: auto;
+	border-radius:50%;
+	transform: scale(1);
+	transition: all 0.9s ease 0s;
+	
+}
+
+.our-team:hover .pic img {
+	box-shadow: 0 0 0 14px aliceblue;
+	transform: scale(0.7);
+}
+
+.our-team .team-content {
+	margin-bottom: 30px;
+}
+
+.our-team .title {
+	font-size: 14px;
+	font-weight: 700;
+	color:black;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.our-team .post {
+	display: block;
+	font-size: 15px;
+	color:black;
+}
+
+@media (max-width: 1080px) {
+	.container {
+	flex-direction: column;
+	}
+	.our-team {
+	width: 60%;
+	margin-top: 25px;
+	}
+}

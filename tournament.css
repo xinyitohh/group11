@@ -1,0 +1,143 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif;
+}
+.text-box {
+	position:absolute;
+	height: 400px;
+	background-color:#4F5261;
+	width: 100%;
+	margin-top: -80px;
+	color:#FFFFFF;
+	justify-content: center;
+	align-items: center;
+}
+.text-box h1 {
+	font-size: 50px;
+	margin-top: 90px;
+}
+.text-box p {
+	text-align: center;
+	font-size: 16px;
+	padding: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.container {
+	display: flex;
+	justify-content: space between;
+	flex-wrap: wrap;
+	margin: 240px auto;
+	margin-top: 500px;
+}
+.container .box {
+	flex: 0 0 calc(33.3% - 20px);
+	height: 300px;
+	max-width: 400px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+}
+
+.container .box .title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #f00;
+	transition: 0.5s;
+	z-index: 1;
+	text-align:center;
+	padding: 5px;
+}
+.container .box:hover .title {
+	top: 20px;
+	right: calc(50% -40px);
+	width: 400px;
+	height: 50px;
+	color: #fff;
+	
+}
+.container .box .title .fa {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 80px;
+	transition: 0.5s;
+	color: #fff;
+}
+.container .box:hover .title .fa {
+	font-size: 40px;
+}
+.container .box .content {
+	position: absolute;
+	top: 100%;
+	height: calc(100% - 100%);
+	padding: 20px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+.container .box:hover .content {
+	top: 80px;
+}
+
+.container .box:nth-child(1) {
+	background: #BB9CC0;
+}
+
+.container .box:nth-child(1) .title {
+	background: #67729D;
+}
+
+.container .box:nth-child(2) {
+	background: #A9B388;
+}
+
+.container .box:nth-child(2) .title {
+	background: #5F6F52;
+}
+
+.container .box:nth-child(3) {
+	background: #EA906C;
+}
+
+.container .box:nth-child(3) .title {
+	background: #B31312;
+}
+
+.container .box:nth-child(4) {
+	background: #F5E8C7;
+}
+
+.container .box:nth-child(4) .title {
+	background: #61A3BA;
+}
+
+.container .box:nth-child(5) {
+	background: #FFDFDF;
+}
+
+.container .box:nth-child(5) .title {
+	background: #F875AA;
+}
+
+.container .box:nth-child(6) {
+	background: #FFBB5C;
+}
+
+.container .box:nth-child(6) .title {
+	background: #FF9B50;
+}
+
+@media (max-width: 900px) {
+	.container .box {
+	flex: 0 0 calc(50% - 20px);
+	}
+}
+

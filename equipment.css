@@ -1,0 +1,96 @@
+﻿.thumb {
+	position:relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 450px;
+	margin-bottom: -130px;
+}
+.thumb li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.thumb li:hover {
+	transform: translateY(-15px);
+}
+.thumb li img {
+	max-width: 80px;
+}
+.text-box {
+
+	height: 400px;
+	background-color:#4F5261;
+	width: 100%;
+	margin-top: -80px;
+	color:#FFFFFF;
+	justify-content: center;
+	align-items: center;
+}
+.text-box h1 {
+	font-size: 50px;
+	margin-top: 90px;
+}
+.text-box p {
+	text-align: center;
+	font-size: 16px;
+	padding: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.content {
+	position:relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 600px;
+	background-color:black;
+	margin-top: -7px;
+}
+
+.content .textbox {
+	position: relative;
+	max-width: 600px;
+	margin-left: 40px;
+}
+
+.content .textbox h1 {
+	color: #fff;
+	font-size: 4em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.content .textbox ul {
+	color: #fff;
+	padding: 10px;
+}
+.content .textbox ul li {
+	margin-bottom: 30px;
+}
+
+.content .textbox ul span {
+	font-weight:bold;
+	font-family:"Cooper Black";
+	font-size:20px;
+}
+
+.content .textbox p {
+	color: #fff;
+}
+
+.content .imgbox {
+	width: 600px;
+	display: flex;
+	padding-right: 50px;
+	padding-top: 50px;
+	justify-content: flex-end;
+}
+
+.content .imgbox img {
+	max-width: 600px
+}

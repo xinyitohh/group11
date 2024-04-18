@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tournament Registration</title>
+	<link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.wrapper {
+		margin: 0 auto;
+		width: 750px;
+		background: skyblue;
+		border-radius: 10px;
+		color: #303f9f;
+		padding: 20px;
+		margin-top: 50px;
+	}
+	.wrapper h1 {
+		font-size: 36px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.input-box {
+		margin-bottom: 20px;
+	}
+	.input-field {
+		position: relative;
+	}
+	.input-field label {
+		margin-bottom: 5px;
+	}
+	.input-field input[type=text], .input-field input[type=email], .input-field input[type=tel] {
+		width: 100%;
+		height: 40px;
+		font-size: 16px;
+		padding: 5px;
+		border-radius: 6px;
+		border: 2px solid blueviolet;
+		outline: none;
+	}
+	.input-field input[type=radio] {
+		margin-right: 5px;
+	}
+	.btn {
+		background-color: blueviolet;
+		color: #fff;
+		border: none;
+		border-radius: 6px;
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	.btn:hover {
+		background-color: indigo;
+	}
+	</style>
+</head>
+
+<body>
+	
+	<nav>
+        <a href="index.html"><img src="images/logo.png" /></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+	
+	<div class="wrapper">
+		<form id="registrationForm">
+			<h1>Tournament Registration</h1>
+			<div class="input-box">
+				<div class="input-field">
+					<label for="name" style="font-size: 20px">Name:</label>
+					<input type="text" id="name" name="name" placeholder="Full Name" required />
+				</div>
+			</div>
+			
+			<div class="input-box">
+				<div class="input-field">
+					<label for="email" style="font-size: 20px">Email:</label>
+					<input type="email" id="email" name="email" placeholder="Email" required />
+				</div>
+			</div>
+				
+			<div class="input-box">
+				<div class="input-field">
+					<label style="font-size: 20px">Gender:</label><br/>
+					<label for="male">Male</label>
+					<input type="radio" id="male" name="gender" required />
+					<label for="female">Female</label>
+					<input type="radio" id="female" name="gender" required />
+				</div>
+			</div>
+			
+			<div class="input-box">
+				<div class="input-field">
+					<label for="phone" style="font-size: 20px">Phone:</label>
+					<input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+				</div>
+			</div>
+			
+			<div class="input-box">
+				<div class="input-field">
+					<label style="font-size: 20px">Category:</label><br/>
+					<label for="m1">Men's Singles</label>
+					<input type="radio" id="m1" name="category" required />
+					<label for="m2">Men's Doubles</label>
+					<input type="radio" id="m2" name="category" required />
+					<label for="f1">Women's Singles</label>
+					<input type="radio" id="f1" name="category" required />
+					<label for="f2">Women's Doubles</label>
+					<input type="radio" id="f2" name="category" required />
+					<label for="mf">Mixed Doubles</label>
+					<input type="radio" id="mf" name="category" required />
+				</div>
+			</div>
+				
+			<div class="input-box">
+				<div class="input-field">
+					<label for="partner" style="font-size: 20px">Name of partner:</label><br/>
+					<span>(if registering for doubles category, enter name of team mate.)</span><br/>
+					<input type="text" id="partner" name="partner" placeholder="Full Name" />
+				</div>
+			</div>
+			<button type="submit" class="btn">Submit</button>
+		</form>
+	</div>
+	
+	<section class="footer">
+        <h4>About Us</h4>
+        <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/apubadmintonclub/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/AsiaPacificU" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+    </section>
+    <script src="nav.js"></script>
+	
+	<script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Successfully Registered.");
+    	});    
+    </script>
+</body>
+
+</html>

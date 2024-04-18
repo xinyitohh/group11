@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tournament</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tournament.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<style>
+		.btn {
+			margin-top:5px; 
+			margin-left:85px; 
+			width:150px; 
+			height:40px; 
+			cursor:pointer;
+			border-radius: 6px;
+			background-color: #430A5D;
+			color: #FF204E;
+			font-size: 16px;
+			font-family:Roman;
+		}	
+	</style>
+</head>
+
+<body>
+	<nav>
+        <a href="index.html"><img src="images/logo.png" /></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">INFO</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="abouUs.html">About Us</a>
+                        <a href="membership.html">Membership Information</a>
+                        <a href="news.html">Club News</a>
+                        <a href="member.html">Meet the Team</a>
+                        <a href="courtrental.html">Court Rental</a>
+                        <a href="indexx.html">Sponsorship and Partnership</a>
+                        <a href="Merchandise.html">Merchandise</a>
+                        <a href="feedback.html">Feedback</a>
+                        <a href="Faq.html">FAQs</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="calendar.html">Event Calendar</a>
+                        <a href="tournament.html">Tournament Info</a>
+                        <a href="tournamentreg.html">Tournament Registration</a>
+                        
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">TRAINING</a>
+                    <div class="dropdown-content">
+                        <a href="equipment.html">Equipment Advice</a>
+                        <a href="health.html">Health Tips</a>
+                        <a href="rules.html">Rules of Badminton</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="">COMMUNITY</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="CommunityOutReach.html">Community Outreach</a>
+                    </div>
+                </li>
+                <li><a href="ContactUs.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>    
+    <section class="text-box">
+    	<h1>Tournaments</h1>
+    	<p>Welcome to Our Badminton Tournaments Page!
+			Are you ready to elevate your badminton game to new heights? Look no further than our dedicated tournaments page, your one-stop destination for all things badminton competition.
+			Our tournaments page isn't just about spectating, it's about participation. As you browse through our listings, you'll find detailed information on each event, including dates, locations, registrtion cost, and prize money. Start registering now!
+		</p>
+    </section>
+    
+
+	<div class="container">
+		<div class="box">
+			<div class="title"><h3>Badminton Championship</h3></div>
+			<div class="content">
+				Date: 10 April 2024<br/>
+				Time: 10.00AM<br/>
+				Location: APU<br/>
+				Price: RM 40 (per person)<br/>
+				Grand Prize: RM 3,000
+				<button onclick="document.location='tournamentreg.html'" class="btn">Register</button>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title"><h3>In-House 2024</h3></div>
+			<div class="content">
+				Date: 25 April 2024<br/>
+				Time: 11.00AM<br/>
+				Location: APU<br/>
+				Price: RM 30 (per person)<br/>
+				Grand Prize: RM 1,000
+				<button onclick="document.location='tournamentreg.html'" class="btn">Register</button>
+			</div>
+	
+		</div>
+		<div class="box">
+			<div class="title"><h3>APU-Sunway Tournament</h3></div>
+			<div class="content">
+				Date: 29 April 2024<br/>
+				Time: 9.00AM<br/>
+				Location: Sunway University<br/>
+				Price: RM50 (per person)<br/>
+				Grand Prize: RM 3,000
+				<button onclick="document.location='tournamentreg.html'" class="btn">Register</button>
+			</div>
+	
+		</div>
+		<div class="box">
+			<div class="title"><h3>APU-MMU Tournament</h3></div>
+			<div class="content">
+				Date: 10 May 2024<br/>
+				Time: 10.00AM<br/>
+				Location: MMU<br/>
+				Price: RM 35 (per person)<br/>
+				Grand Prize: RM 1,500
+				<button onclick="document.location='tournamentreg.html'" class="btn">Register</button>
+			</div>
+	
+		</div>
+		<div class="box">
+			<div class="title"><h3>APU Badminton Open</h3></div>
+			<div class="content">
+				Date: 15 May 2024<br/>
+				Time: 10.00AM<br/>
+				Location: APU<br/>
+				Price: RM 40 (per person)<br/>
+				Grand Prize: RM 2,500
+				<button onclick="document.location='tournamentreg.html'" class="btn">Register</button>
+			</div>
+	
+		</div>
+		<div class="box">
+			<div class="title"><h3>SUKIPT 2024</h3></div>
+			<div class="content">
+				Date: 20 May 2024<br/>
+				Time: 10.00AM<br/>
+				Location: Baminton Central<br/>
+				Price: RM 50 (per person)<br/>
+				Grand Prize: RM 5,000
+				<button onclick="document.location='tournamentreg.html'" class="btn">Register</button>
+			</div>
+	
+		</div>
+
+	</div>
+<br/>
+	<section class="footer" >
+        <h4>About Us</h4>
+        <p>The APU Badminton Club is dedicated to promoting the sport of badminton within our university, providing both competitive and social opportunities for students to engage with the game.</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/apubadmintonclub/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/AsiaPacificU" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/p/B9_8krmnmR0/" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Made with <i class="fa fa-heart-o"></i> by the APU Badminton Club Team</p>
+    </section>
+    <script src="nav.js"></script></body>
+
+</html>
